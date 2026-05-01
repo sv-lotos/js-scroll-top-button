@@ -1,4 +1,4 @@
-function createScrollTopButton(options = {}) {
+function ScrollTopButton(options = {}) {
   const {
     size = '50px',
     position = { bottom: '20px', right: '20px' },
