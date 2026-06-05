@@ -1,8 +1,8 @@
-function ScrollTopButton(options = {}) {
+function createScrollTopButton(options = {}) {
   const {
     size = '50px',
     position = { bottom: '20px', right: '20px' },
-    color = '#007bff',
+    color = '#007bff',            
     textColor = '#ffffff',
     opacity = 1,
     scrollThreshold = 200,
@@ -10,7 +10,8 @@ function ScrollTopButton(options = {}) {
     fontSize = '24px',
     icon = '↑',
     zIndex = 9999,
-    transitionDuration = '0.4s'
+    transitionDuration = '0.4s',
+    border = 'none'              
   } = options;
 
   const button = document.createElement('button');
@@ -25,14 +26,13 @@ function ScrollTopButton(options = {}) {
     visibility: 'hidden',
     pointerEvents: 'none',
     transition: `opacity ${transitionDuration} ease, visibility ${transitionDuration} ease`,
-    
     position: 'fixed',
     width: size,
     height: size,
     backgroundColor: color,
     color: textColor,
     borderRadius: borderRadius,
-    border: 'none',
+    border: border,               
     cursor: 'pointer',
     zIndex: zIndex,
     fontSize: fontSize,
